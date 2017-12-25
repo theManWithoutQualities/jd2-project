@@ -1,5 +1,5 @@
 
-package com.konst.webbattle.conf;
+package com.konst.webbattle.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
