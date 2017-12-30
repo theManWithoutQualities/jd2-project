@@ -1,8 +1,8 @@
 
-package com.konst.webbattle.services.interfaces;
+package com.konst.webbattle.domain;
 
 import java.util.ArrayList;
-import com.konst.webbattle.logic.*;
+import com.konst.webbattle.domain.model.*;
 import java.util.List;
 
 public interface DataServiceInterface {

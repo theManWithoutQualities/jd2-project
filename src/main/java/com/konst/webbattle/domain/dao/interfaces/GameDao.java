@@ -1,8 +1,8 @@
 
-package com.konst.webbattle.dao.interfaces;
+package com.konst.webbattle.domain.dao.interfaces;
 
-import com.konst.webbattle.logic.User;
-import com.konst.webbattle.logic.Game;
+import com.konst.webbattle.domain.model.User;
+import com.konst.webbattle.domain.model.Game;
 import java.util.ArrayList;
 
 public interface GameDao {

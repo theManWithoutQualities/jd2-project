@@ -1,18 +1,18 @@
 
-package com.konst.webbattle.services;
+package com.konst.webbattle.domain;
 
-import com.konst.webbattle.services.interfaces.DataServiceInterface;
-import com.konst.webbattle.dao.interfaces.ShotDao;
-import com.konst.webbattle.dao.interfaces.GameDao;
-import com.konst.webbattle.dao.interfaces.FieldDao;
-import com.konst.webbattle.dao.interfaces.UserDao;
-import com.konst.webbattle.logic.Game;
-import com.konst.webbattle.logic.Invitation;
-import com.konst.webbattle.logic.User;
+import com.konst.webbattle.domain.DataServiceInterface;
+import com.konst.webbattle.domain.dao.interfaces.ShotDao;
+import com.konst.webbattle.domain.dao.interfaces.GameDao;
+import com.konst.webbattle.domain.dao.interfaces.FieldDao;
+import com.konst.webbattle.domain.dao.interfaces.UserDao;
+import com.konst.webbattle.domain.model.Game;
+import com.konst.webbattle.domain.model.Invitation;
+import com.konst.webbattle.domain.model.User;
 import java.util.ArrayList;
-import com.konst.webbattle.logic.Field;
-import com.konst.webbattle.logic.Shot;
-import com.konst.webbattle.repo.InvitationRepository;
+import com.konst.webbattle.domain.model.Field;
+import com.konst.webbattle.domain.model.Shot;
+import com.konst.webbattle.domain.repo.InvitationRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,11 +1,12 @@
 
-package com.konst.webbattle.logic;
+package com.konst.webbattle.domain.model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
 @Table(name="shot")
-public class Shot {
+public class Shot implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

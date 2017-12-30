@@ -1,9 +1,9 @@
 
-package com.konst.webbattle.dao;
+package com.konst.webbattle.domain.dao;
 
-import com.konst.webbattle.dao.interfaces.GameDao;
-import com.konst.webbattle.logic.User;
-import com.konst.webbattle.logic.Game;
+import com.konst.webbattle.domain.dao.interfaces.GameDao;
+import com.konst.webbattle.domain.model.User;
+import com.konst.webbattle.domain.model.Game;
 import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -19,7 +19,8 @@ public class GameDaoImpl implements GameDao{
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
-    
+
+    @Override
     public ArrayList<Game> findAllGames(){
         
         Query query = entityManager.createQuery("Select g from Game g");
@@ -27,6 +28,7 @@ public class GameDaoImpl implements GameDao{
 
     }
 
+    @Override
     public ArrayList<Game> findCurrentUserGames(User user){
 
         Query query = entityManager.createQuery("select g from User u join u.games g where u.num=:num");
@@ -35,6 +37,7 @@ public class GameDaoImpl implements GameDao{
         
     }
 
+    @Override
     public ArrayList<Game> findClosedUserGames(User user){
 
         Query query = entityManager.createQuery("select g from User u join u.games g where u.num=:num and g.active=false");
@@ -43,18 +46,21 @@ public class GameDaoImpl implements GameDao{
 
     }
 
+    @Override
     public Game findGameByNum(int num){
 
         return entityManager.find(Game.class, num);
         
     }
 
+    @Override
     public void create(Game game){
 
         entityManager.persist(game);
         
     }
 
+    @Override
     public void update(Game game){
                 
         entityManager.merge(game);

@@ -1,9 +1,9 @@
 
-package com.konst.webbattle.dao;
+package com.konst.webbattle.domain.dao;
 
-import com.konst.webbattle.dao.interfaces.ShipDao;
-import com.konst.webbattle.logic.Field;
-import com.konst.webbattle.logic.Ship;
+import com.konst.webbattle.domain.dao.interfaces.ShipDao;
+import com.konst.webbattle.domain.model.Field;
+import com.konst.webbattle.domain.model.Ship;
 import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -19,7 +19,8 @@ public class ShipDaoImpl implements ShipDao{
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
-    
+
+    @Override
     public ArrayList<Ship> findFieldShips(Field field){
 
         Query query = entityManager.createQuery("select s from Field f join f.ships s where f.num=:num");
@@ -28,6 +29,7 @@ public class ShipDaoImpl implements ShipDao{
 
     }
 
+    @Override
     public void create(Ship ship){
 
         entityManager.persist(ship);

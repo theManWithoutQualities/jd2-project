@@ -1,7 +1,7 @@
 
-package com.konst.webbattle.dao.interfaces;
+package com.konst.webbattle.domain.dao.interfaces;
 
-import com.konst.webbattle.logic.User;
+import com.konst.webbattle.domain.model.User;
 import java.util.ArrayList;
 
 public interface UserDao {

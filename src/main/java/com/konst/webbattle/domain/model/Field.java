@@ -1,8 +1,8 @@
 
-package com.konst.webbattle.logic;
+package com.konst.webbattle.domain.model;
 
 import com.konst.webbattle.services.Battle;
-import com.konst.webbattle.logic.interfaces.Playable;
+import com.konst.webbattle.domain.model.interfaces.Playable;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -66,6 +66,7 @@ public class Field implements Playable, Serializable {
         this.game = game;
     }
 
+    @Override
     public boolean placeShip(Ship ship){
         if((ship.getOrientation()==Orientation.HORIZONTAL)&&(ship.getX()+ship.getLength()-1>=Battle.FIELD_SIZE))
             return false;
@@ -78,6 +79,7 @@ public class Field implements Playable, Serializable {
         return true;        
     }
 
+    @Override
     public int addShot(Shot shot){
         
         if((shot.getX()<0)||(shot.getX()>Battle.FIELD_SIZE-1)||(shot.getY()<0)||(shot.getY()>Battle.FIELD_SIZE-1))
@@ -96,6 +98,7 @@ public class Field implements Playable, Serializable {
         
     }
 
+    @Override
     public int countWounds(){
         
         int result=0;

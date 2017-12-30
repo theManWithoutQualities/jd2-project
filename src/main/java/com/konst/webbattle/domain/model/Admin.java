@@ -1,5 +1,5 @@
 
-package com.konst.webbattle.logic;
+package com.konst.webbattle.domain.model;
 
 import java.io.Serializable;
 import javax.persistence.DiscriminatorValue;

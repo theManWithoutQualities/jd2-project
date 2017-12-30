@@ -1,9 +1,9 @@
 
-package com.konst.webbattle.dao;
+package com.konst.webbattle.domain.dao;
 
-import com.konst.webbattle.dao.interfaces.ShotDao;
-import com.konst.webbattle.logic.Field;
-import com.konst.webbattle.logic.Shot;
+import com.konst.webbattle.domain.dao.interfaces.ShotDao;
+import com.konst.webbattle.domain.model.Field;
+import com.konst.webbattle.domain.model.Shot;
 import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -19,7 +19,8 @@ public class ShotDaoImpl implements ShotDao{
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
-    
+
+    @Override
     public ArrayList<Shot> findFieldShots(Field field){
 
         Query query = entityManager.createQuery("select s from Field f join f.ships s where f.num=:num");
@@ -28,12 +29,14 @@ public class ShotDaoImpl implements ShotDao{
 
     }
 
+    @Override
     public void create(Shot shot){
 
         entityManager.persist(shot);
         
     }
-    
+
+    @Override
     public void update(Shot shot){
 
         entityManager.merge(shot);

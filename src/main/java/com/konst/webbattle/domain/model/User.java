@@ -1,6 +1,7 @@
-package com.konst.webbattle.logic;
+package com.konst.webbattle.domain.model;
 
-import com.konst.webbattle.logic.interfaces.Registerable;
+import com.konst.webbattle.domain.model.interfaces.Registerable;
+import java.io.Serializable;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import javax.validation.constraints.Size;
 @DiscriminatorColumn(name = "User_Type")
 @DiscriminatorValue("User")
 @Table(name="user")
-public class User implements Registerable{
+public class User implements Registerable, Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -61,6 +62,7 @@ public class User implements Registerable{
         this.name = name;
     }
 
+    @Override
     public String getName(){
         return name;
     }
@@ -69,6 +71,7 @@ public class User implements Registerable{
         this.login = login;
     }
 
+    @Override
     public String getLogin(){
         return login;
     }
@@ -77,6 +80,7 @@ public class User implements Registerable{
         this.password = password;
     }
 
+    @Override
     public String getPassword(){
         return password;
     }

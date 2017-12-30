@@ -5,7 +5,7 @@
 <c:import url="menu.jsp" />
         ${message}<br>
 
-        <h5><a href="/">OK</a></h5>
+        <h5><a href="${pageContext.request.contextPath}/">OK</a></h5>
 
 	
 	<div class="footer"></div>

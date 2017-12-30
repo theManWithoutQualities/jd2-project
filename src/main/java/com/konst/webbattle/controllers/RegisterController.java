@@ -1,9 +1,9 @@
 
 package com.konst.webbattle.controllers;
 
-import com.konst.webbattle.logic.User;
+import com.konst.webbattle.domain.model.User;
 import com.konst.webbattle.services.Battle;
-import com.konst.webbattle.services.DataService;
+import com.konst.webbattle.domain.DataService;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

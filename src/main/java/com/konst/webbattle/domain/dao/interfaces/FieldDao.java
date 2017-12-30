@@ -1,7 +1,7 @@
 
-package com.konst.webbattle.dao.interfaces;
+package com.konst.webbattle.domain.dao.interfaces;
 
-import com.konst.webbattle.logic.Field;
+import com.konst.webbattle.domain.model.Field;
 
 public interface FieldDao {
     

@@ -1,8 +1,8 @@
 
-package com.konst.webbattle.dao.interfaces;
+package com.konst.webbattle.domain.dao.interfaces;
 
-import com.konst.webbattle.logic.Field;
-import com.konst.webbattle.logic.Ship;
+import com.konst.webbattle.domain.model.Field;
+import com.konst.webbattle.domain.model.Ship;
 import java.util.ArrayList;
 
 public interface ShipDao {

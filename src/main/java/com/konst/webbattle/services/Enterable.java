@@ -1,7 +1,7 @@
 
-package com.konst.webbattle.services.interfaces;
+package com.konst.webbattle.services;
 
-import com.konst.webbattle.logic.User;
+import com.konst.webbattle.domain.model.User;
 
 public interface Enterable {
     

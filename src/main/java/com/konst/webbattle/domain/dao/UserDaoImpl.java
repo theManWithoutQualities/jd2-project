@@ -1,8 +1,8 @@
 
-package com.konst.webbattle.dao;
+package com.konst.webbattle.domain.dao;
 
-import com.konst.webbattle.dao.interfaces.UserDao;
-import com.konst.webbattle.logic.User;
+import com.konst.webbattle.domain.dao.interfaces.UserDao;
+import com.konst.webbattle.domain.model.User;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -19,7 +19,8 @@ public class UserDaoImpl implements UserDao{
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
-    
+
+    @Override
     public User findByLogin(String login){
         
         Query query = entityManager.createQuery("select u from User u where login=:login");
@@ -32,6 +33,7 @@ public class UserDaoImpl implements UserDao{
 
     }
 
+    @Override
     public ArrayList<User> findAllUsers(){
 
         Query query = entityManager.createQuery("select u from User u");
@@ -39,12 +41,14 @@ public class UserDaoImpl implements UserDao{
         
     }
 
+    @Override
     public void create(User user){
 
         entityManager.persist(user);
         
     }
 
+    @Override
     public void update(User user){
 
         entityManager.merge(user);

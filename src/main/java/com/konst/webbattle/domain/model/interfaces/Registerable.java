@@ -1,5 +1,5 @@
 
-package com.konst.webbattle.logic.interfaces;
+package com.konst.webbattle.domain.model.interfaces;
 
 public interface Registerable {
     

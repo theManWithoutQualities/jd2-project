@@ -1,7 +1,8 @@
 
-package com.konst.webbattle.logic;
+package com.konst.webbattle.domain.model;
 
 import com.konst.webbattle.services.Battle;
+import java.io.Serializable;
 import org.hibernate.annotations.IndexColumn;
 
 import javax.persistence.*;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Entity
 @Table(name="game")
-public class Game {
+public class Game implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

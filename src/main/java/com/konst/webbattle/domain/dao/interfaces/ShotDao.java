@@ -1,8 +1,8 @@
 
-package com.konst.webbattle.dao.interfaces;
+package com.konst.webbattle.domain.dao.interfaces;
 
-import com.konst.webbattle.logic.Field;
-import com.konst.webbattle.logic.Shot;
+import com.konst.webbattle.domain.model.Field;
+import com.konst.webbattle.domain.model.Shot;
 import java.util.ArrayList;
 
 public interface ShotDao {

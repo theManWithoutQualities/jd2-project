@@ -1,16 +1,18 @@
 
 package com.konst.webbattle.services;
 
-import com.konst.webbattle.services.interfaces.Enterable;
+import com.konst.webbattle.domain.DataService;
+
 import java.util.ArrayList;
-import com.konst.webbattle.logic.Field;
-import com.konst.webbattle.logic.Game;
-import com.konst.webbattle.logic.Invitation;
-import com.konst.webbattle.logic.Shot;
-import com.konst.webbattle.logic.User;
+import com.konst.webbattle.domain.model.Field;
+import com.konst.webbattle.domain.model.Game;
+import com.konst.webbattle.domain.model.Invitation;
+import com.konst.webbattle.domain.model.Shot;
+import com.konst.webbattle.domain.model.User;
+import java.io.Serializable;
 import java.util.List;
 
-public class Battle implements Enterable{
+public class Battle implements Enterable, Serializable{
     
     public static final int FIELD_SIZE = 10;
     public static final int SHIP_COUNT = 10;
