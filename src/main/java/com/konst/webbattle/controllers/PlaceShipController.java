@@ -1,9 +1,9 @@
 
 package com.konst.webbattle.controllers;
 
-import com.konst.webbattle.logic.Field;
-import com.konst.webbattle.logic.Orientation;
-import com.konst.webbattle.logic.Ship;
+import com.konst.webbattle.domain.model.Field;
+import com.konst.webbattle.domain.model.Orientation;
+import com.konst.webbattle.domain.model.Ship;
 import com.konst.webbattle.services.Battle;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;

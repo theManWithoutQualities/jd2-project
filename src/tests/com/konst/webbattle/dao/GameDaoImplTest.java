@@ -1,11 +1,11 @@
-package com.konst.webbattle.dao;
+package com.konst.webbattle.domain.dao;
 
-import com.konst.webbattle.dao.interfaces.FieldDao;
-import com.konst.webbattle.dao.interfaces.GameDao;
-import com.konst.webbattle.dao.interfaces.UserDao;
-import com.konst.webbattle.logic.Field;
-import com.konst.webbattle.logic.Game;
-import com.konst.webbattle.logic.User;
+import com.konst.webbattle.domain.dao.interfaces.FieldDao;
+import com.konst.webbattle.domain.dao.interfaces.GameDao;
+import com.konst.webbattle.domain.dao.interfaces.UserDao;
+import com.konst.webbattle.domain.model.Field;
+import com.konst.webbattle.domain.model.Game;
+import com.konst.webbattle.domain.model.User;
 import junit.framework.TestCase;
 
 public class GameDaoImplTest extends TestCase {

@@ -1,7 +1,7 @@
 
 package com.konst.webbattle.controllers;
 
-import com.konst.webbattle.logic.Shot;
+import com.konst.webbattle.domain.model.Shot;
 import com.konst.webbattle.services.Battle;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
