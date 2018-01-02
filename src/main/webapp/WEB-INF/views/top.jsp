@@ -5,6 +5,7 @@
 	<title>Sea Battle</title>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/javascripts/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/javascripts/scripts.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/static/javascripts/place_ships.js"></script>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/styles.css" />
 
 </head>

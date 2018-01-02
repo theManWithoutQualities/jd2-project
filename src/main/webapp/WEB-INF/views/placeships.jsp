@@ -3,7 +3,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="top.jsp" />
 <center><h4>Click "Start" to start place ships. Left-click for Horisontal ship; Right-click for Vertical ship</h4></center>
-        <button class="start_place">Start</button>
         
         <c:set var="alphabet" value="${['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']}" scope="page"></c:set>
         <div class="field">
